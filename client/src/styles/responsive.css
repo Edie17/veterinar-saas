@@ -1,0 +1,116 @@
+@media (max-width: 980px) {
+  .hero { min-height: 700px; grid-template-columns: 1fr; align-items: start; padding-top: 64px; padding-bottom: 72px; }
+  .hero::before { background: linear-gradient(180deg, rgba(6,17,14,.92) 0%, rgba(7,25,20,.76) 32%, rgba(8,32,26,.46) 60%, rgba(9,38,31,.18) 100%); }
+  .hero > div { max-width: min(650px, 100%); }
+  .heroBg { object-position: center 30%; }
+  .cmsShell { grid-template-columns: 1fr; }
+  .cmsSidebar { position: relative; height: auto; }
+  .cmsNav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cmsGridTwo, .cmsStatsGrid, .cmsFormGrid, .cmsArticleFormGrid, .cmsSectionFormGrid, .cmsSettingsGrid, .cmsManualBooking, .urgentSection, .prepSection, .servicesLayout { grid-template-columns: 1fr; }
+  .servicePhoto img { min-height: 340px; }
+  .cmsHoursRow { grid-template-columns: 1fr 1fr; }
+  .cmsAppointmentRow, .cmsAppointmentRow.detailed, .cmsEventRow, .cmsArticleRow, .hoursOverview, .articleDetailHero, .reservationSection, .reservationFields { grid-template-columns: 1fr; }
+  .cmsCalendarGrid { grid-template-columns: repeat(7, minmax(170px, 1fr)); }
+  .reservationAside { position: static; }
+  .blogGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cmsSectionEditorCard { max-width: none; }
+}
+@media (max-width: 1240px) {
+  .cmsArticleEditorCard .cmsCardHeader, .cmsSectionEditorCard .cmsCardHeader { flex-direction: column; }
+  .cmsArticleEditorCard .cmsTopbarActions, .cmsSectionEditorCard .cmsTopbarActions { justify-content: flex-start; width: 100%; }
+}
+@media (max-width: 820px) {
+  .mobileBookingActions:not([hidden]) { position: fixed; display: grid; grid-template-columns: 1fr 1.4fr; gap: 10px; left: 0; right: 0; bottom: 0; z-index: 15; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.97); border-top: 1px solid var(--color-border); box-shadow: 0 -4px 18px rgba(7,31,26,.08); }
+  .mobileBookingActions .button { min-height: 46px; }
+  .siteFooter { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  .cookieBanner { bottom: calc(88px + env(safe-area-inset-bottom)); max-height: 65dvh; overflow-y: auto; }
+  .topbar { padding: 14px 20px; }
+  .topbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px 16px; background: rgba(246,251,247,.98); z-index: 10; }
+  .topbar .brand { font-size: .92rem; line-height: 1.35; }
+  .brandName { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .publicMenuToggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: 12px; background: white; color: var(--color-forest-900); font-weight: 800; }
+  .publicMenuToggle span { font-size: 1.15rem; }
+  .publicNav { display: none; grid-column: 1 / -1; gap: 6px 12px; padding-top: 10px; border-top: 1px solid var(--color-border); }
+  .publicNav[data-open="true"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .publicNav a { padding: 10px 12px; min-height: 46px; border-radius: 12px; }
+  .publicNavBooking { grid-column: 1 / -1; justify-content: center; }
+  .publicNav a:not(.publicNavBooking):hover { background: var(--color-mint-100); }
+  .section, .hero { padding-left: 18px; padding-right: 18px; }
+  .section { padding-top: 44px; padding-bottom: 44px; }
+  input, textarea, select { font-size: 16px; min-height: 46px; }
+  .button { min-height: 46px; }
+  .slot { min-width: 64px; min-height: 46px; justify-content: center; }
+  .articleBackLink, .bookingManagement > a { display: inline-flex; align-items: center; min-height: 44px; }
+  .readMoreLink, .blogCardBody h3 a { display: inline-flex; align-items: center; min-height: 44px; }
+  .bookingFaq summary, .footerNav a { min-height: 46px; }
+  .reservationSubmit .button { width: 100%; min-height: 48px; }
+  .reservationSubmit span { line-height: 1.5; }
+  .bookingManagement .panel { padding: 20px; }
+  .managementActions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .managementFields > .button { width: 100%; }
+  .hoursTable div { gap: 12px; }
+  .hoursTable strong { flex-shrink: 0; }
+  .hoursTable span { text-align: right; }
+  .hero, .contactGrid, .cmsLoginShell { grid-template-columns: 1fr; }
+  .hero { min-height: 620px; padding-top: 52px; padding-bottom: 56px; }
+  .hero h1 { max-width: 100%; font-size: clamp(42px, 10vw, 68px); line-height: 1.02; }
+  .hero::before { background: linear-gradient(180deg, rgba(6,17,14,.94) 0%, rgba(7,25,20,.80) 36%, rgba(8,32,26,.50) 66%, rgba(9,38,31,.22) 100%); }
+  .heroBg { object-position: center 26%; }
+  .cards, .blogGrid, .urgentGrid, .prepGrid { grid-template-columns: 1fr; }
+  .blogHeader { margin-inline: 0; border-radius: 8px; }
+  .articlePreviewHeader { grid-template-columns: 1fr; }
+  .articlePreviewHeader > div { padding-left: 16px; }
+  .articlePreviewHeader .button { justify-self: start; }
+  .articleDetailHero img { min-height: 260px; }
+  .cmsTopbar { align-items: flex-start; flex-direction: column; }
+  .cmsMain { padding: 16px; }
+  .cmsNav { grid-template-columns: 1fr; }
+  .cmsCard { padding: 18px; border-radius: 22px; }
+  .cmsCardHeader { flex-direction: column; }
+  .cmsCalendarToolbar { justify-content: flex-start; width: 100%; }
+  .cmsTopbarActions { justify-content: flex-start; width: 100%; }
+  .cmsTopbarActions .button { flex: 1 1 140px; }
+  .richTextEditor .tox-tinymce { min-height: 360px; }
+  .reservationHeader, .reservationSubmit { flex-direction: column; align-items: flex-start; }
+  .reservationStep, .reservationHeader, .reservationSubmit { padding-left: 18px; padding-right: 18px; }
+  .reservationPanel { width: 100%; justify-self: stretch; }
+  .cookieBanner { grid-template-columns: 1fr; }
+  .cookieActions { justify-content: flex-start; }
+  .footerNav a { flex: 1 1 150px; justify-content: center; }
+  .footerMeta { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .topbar { padding: 12px 16px; }
+  .brand { max-width: 100%; }
+  .publicNav { width: 100%; }
+  .section, .hero { padding-left: 14px; padding-right: 14px; }
+  .actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .actions .button { width: 100%; min-height: 46px; padding: 10px 8px; font-size: clamp(.82rem, 3.5vw, .95rem); white-space: nowrap; }
+  .hero { min-height: 560px; padding-top: 38px; padding-bottom: 44px; }
+  .hero::before { background: linear-gradient(180deg, rgba(6,17,14,.95) 0%, rgba(7,25,20,.84) 42%, rgba(8,32,26,.54) 72%, rgba(9,38,31,.26) 100%); }
+  .heroBg { object-position: center 22%; }
+  .reservationStep, .reservationHeader, .reservationSubmit { padding-left: 16px; padding-right: 16px; }
+  .reservationReasonGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reasonOption { min-height: 88px; padding: 12px; }
+  .reasonOption strong { font-size: .95rem; line-height: 1.3; overflow-wrap: anywhere; }
+  .hero h1 { font-size: clamp(36px, 9.8vw, 46px); line-height: 1.08; }
+  .hero { min-height: 520px; }
+  .articleDetailHero h1 { font-size: clamp(30px, 8vw, 40px); overflow-wrap: anywhere; }
+  .bookingManagement h1 { font-size: clamp(28px, 8vw, 38px); }
+  .bookingManagement h2 { font-size: 26px; overflow-wrap: anywhere; }
+  .blogHeader, .articleArchive .blogHeader { padding: 28px 22px; }
+  .articleArchive .blogHeader::before { display: none; }
+  .articleDetail { gap: 24px; }
+  .servicePhoto img { min-height: 240px; }
+}
+
+@media (max-width: 380px) {
+  .hero .actions { grid-template-columns: minmax(0, 1fr); }
+  .hero .actions .button { font-size: 1rem; }
+  .cookieActions { display: grid; grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

@@ -1,0 +1,14 @@
+**/node_modules
+**/bin
+**/obj
+.git
+.tools
+.local
+.qa
+tmp
+work
+**/.env
+**/*.db
+**/*.db-*
+client/dist
+api/_legacy_minimal_api

@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      Keep generated build artifacts out of src/**/bin and src/**/obj.
+      The project directory is shared between Windows/Visual Studio and WSL/Docker; stale
+      Debug DLLs can otherwise be locked or owned by another runtime and make dotnet run fail.
+
+      Put outputs into the OS temp directory rather than the repo itself. This avoids Windows/WSL
+      file-lock and ownership issues on bind-mounted project folders.
+    -->
+    <_VetArtifactsRoot Condition="'$(OS)' == 'Windows_NT'">$(TEMP)\veterinar-clinic-artifacts\</_VetArtifactsRoot>
+    <_VetArtifactsRoot Condition="'$(OS)' != 'Windows_NT'">/tmp/veterinar-clinic-artifacts/</_VetArtifactsRoot>
+    <BaseOutputPath>$(_VetArtifactsRoot)bin/$(MSBuildProjectName)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(_VetArtifactsRoot)obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <WarningsAsErrors>$(WarningsAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsAsErrors>
+    <RestoreFallbackFolders></RestoreFallbackFolders>
+    <NoWarn>$(NoWarn);NETSDK1188</NoWarn>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildProjectDirectory)/bin/**;$(MSBuildProjectDirectory)/obj/**;$(MSBuildThisFileDirectory).artifacts/**</DefaultItemExcludes>
+  </PropertyGroup>
+</Project>

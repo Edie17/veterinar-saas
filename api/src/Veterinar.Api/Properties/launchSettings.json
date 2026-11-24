@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "Veterinar.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DATABASE_PROVIDER": "sqlite",
+        "CONNECTION_STRING": "Data Source=veterinar.local.db",
+        "ADMIN_EMAIL": "admin@example.cz",
+        "ADMIN_PASSWORD": "ChangeMe123!",
+        "CSRF_SECRET": "dev-local-secret-change-before-production-123456",
+        "COOKIE_SECURE": "false",
+        "CORS_ORIGIN": "http://localhost:5173"
+      },
+      "applicationUrl": "http://localhost:5067"
+    }
+  }
+}

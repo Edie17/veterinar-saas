@@ -1,0 +1,9 @@
+{
+  "name": "veterinar-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "qa": "node scripts/qa.mjs",
+    "test": "npm run test --prefix client && dotnet test api/Veterinar.sln -c Release"
+  }
+}

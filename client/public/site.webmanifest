@@ -1,0 +1,11 @@
+{
+  "name": "Veterinární ordinace Demo",
+  "short_name": "Veterina Demo",
+  "description": "Veterinární ordinace s online rezervací termínů, ordinační dobou a články.",
+  "lang": "cs-CZ",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F3FAF6",
+  "theme_color": "#105342"
+}
